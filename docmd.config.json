@@ -1,0 +1,67 @@
+{
+  "title": "My Documentation",
+  "url": "https://docs.myproject.com",
+  "src": "docs",
+  "out": "site",
+  "engine": "js",
+  "layout": {
+    "spa": true,
+    "header": {
+      "enabled": true
+    },
+    "sidebar": {
+      "collapsible": true,
+      "defaultCollapsed": false
+    },
+    "optionsMenu": {
+      "position": "sidebar-top",
+      "components": {
+        "search": true,
+        "themeSwitch": true
+      }
+    },
+    "footer": {
+      "style": "minimal",
+      "content": "© 2026 My Project.",
+      "branding": true
+    }
+  },
+  "theme": {
+    "name": "default",
+    "appearance": "system",
+    "codeHighlight": true
+  },
+  "minify": true,
+  "autoTitleFromH1": true,
+  "copyCode": true,
+  "pageNavigation": true,
+  "navigation": [
+    { "title": "Quick Start", "path": "/", "icon": "zap" },
+    { "title": "Agent Skills", "path": "/skills/", "icon": "brain-circuit" },
+    {
+      "title": "Quick Guide",
+      "icon": "book-open",
+      "collapsible": false,
+      "children": [
+        { "title": "Install", "path": "https://docs.docmd.io/getting-started/installation/", "icon": "download", "external": true },
+        { "title": "Configure", "path": "https://docs.docmd.io/configuration/overview/", "icon": "settings", "external": true },
+        { "title": "Migrate", "path": "https://docs.docmd.io/migration/overview/", "icon": "arrow-left-right", "external": true },
+        { "title": "Deploy", "path": "https://docs.docmd.io/deployment/", "icon": "rocket", "external": true }
+      ]
+    },
+    { "title": "GitHub", "path": "https://github.com/docmd-io/docmd", "icon": "github", "external": true }
+  ],
+  "plugins": {
+    "ai": {
+      "assistant": true,
+      "projectId": ""
+    },
+    "git": {
+      "commitHistory": true,
+      "maxCommits": 5
+    },
+    "seo": {
+      "defaultDescription": "Documentation built with docmd."
+    }
+  }
+}

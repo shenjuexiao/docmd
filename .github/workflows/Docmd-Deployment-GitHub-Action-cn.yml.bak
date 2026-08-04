@@ -1,0 +1,37 @@
+# Docmd-Deployment-github-action-cn.yml
+# github.com/shenjuexiao
+# 20260805
+
+# docs.docmd.io/zh/deployment/github-action/
+# GitHub Action
+
+# .github/workflows/docs.yml
+name: Deploy Docs
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: docmd-io/deploy@v1
+        id: build
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ steps.build.outputs.site-dir }}
+
+      - uses: actions/deploy-pages@v4
+        id: deploy
