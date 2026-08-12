@@ -1,11 +1,11 @@
 # Docmd-Deployment-github-action-cn.yml
 # github.com/shenjuexiao
-# 20260805
+# 20260812
 
 # docs.docmd.io/zh/deployment/github-action/
 # GitHub Action
 
-# .github/workflows/docs.yml
+# .github/workflows/Docmd-Deployment-github-action-cn.yml
 name: Deploy Docs
 
 on:

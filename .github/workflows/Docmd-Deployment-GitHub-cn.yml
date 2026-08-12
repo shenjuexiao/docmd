@@ -1,10 +1,11 @@
 # Docmd-Deployment-GitHub-cn.yml
 # github.com/shenjuexiao
-# 20260805
+# 20260812
 
 # docs.docmd.io/zh/deployment/starter-template/
 # docmd 入门模板 (Starter Template)
 
+# .github/workflows/Docmd-Deployment-GitHub-cn.yml
 name: Docs
 
 on:
